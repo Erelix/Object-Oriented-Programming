@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="679.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bamo.AssignStudentsToGroupsController">
+   <children>
+      <TableView fx:id="studentTable" prefHeight="679.0" prefWidth="545.0">
+        <columns>
+           <TableColumn fx:id="nrColumn" prefWidth="36.0" text="Nr" />
+            <TableColumn fx:id="idColumn" prefWidth="89.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="129.0" text="Vardas" />
+          <TableColumn fx:id="surnameColumn" prefWidth="123.0" text="Pavardė" />
+            <TableColumn fx:id="groupColumn" prefWidth="85.0" text="Grupė" />
+            <TableColumn fx:id="checkBoxColumn" prefWidth="82.0" text="Rinktis" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe3e3" height="287.0" layoutX="545.0" layoutY="219.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="216.0" />
+      <TextField fx:id="groupNrInput" layoutX="576.0" layoutY="326.0" prefHeight="31.0" prefWidth="145.0" promptText="Nr.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="groupBTN" layoutX="573.0" layoutY="370.0" mnemonicParsing="false" onAction="#onClickGroupBTN" prefHeight="39.0" prefWidth="151.0" text="Pridėti į grupę">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="576.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupė:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="577.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studentų skirstymas į grupes" wrappingWidth="138.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="582.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Nebūtina pasirinkti studentų. Taip tiesiog bus sukurta tuščia grupė" wrappingWidth="128.0" />
+      <Button fx:id="deleteStudentsBTN" layoutX="573.0" layoutY="626.0" mnemonicParsing="false" onAction="#onClickDeleteStudentsBTN" prefHeight="39.0" prefWidth="151.0" text="Trinti studentus">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="refreshBTN" layoutX="571.0" layoutY="143.0" mnemonicParsing="false" onAction="#onClickRefreshBTN" prefHeight="27.0" prefWidth="151.0" text="Perkrauti lentelę">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="displayGroupsBTN" layoutX="571.0" layoutY="235.0" mnemonicParsing="false" onAction="#onClickDisplayGroupsBTN" prefHeight="27.0" prefWidth="151.0" text="Rodyti pagal grupę">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

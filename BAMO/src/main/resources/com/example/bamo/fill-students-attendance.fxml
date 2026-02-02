@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="377.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bamo.FillStudentsAttendanceController">
+    <children>
+        <TableView fx:id="studentTable" prefHeight="379.0" prefWidth="775.0">
+            <columns>
+                <TableColumn fx:id="nrColumn" prefWidth="51.0" text="Nr" />
+                <TableColumn fx:id="idColumn" prefWidth="99.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="225.0" text="Vardas" />
+                <TableColumn fx:id="surnameColumn" prefWidth="256.0" text="Pavardė" />
+                <TableColumn fx:id="groupColumn" minWidth="0.0" prefWidth="74.0" text="Grupė" />
+            <TableColumn fx:id="checkBoxColumn" prefWidth="69.0" text="Rinktis" />
+            </columns>
+        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebff" height="111.0" layoutY="380.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="985.0" />
+        <Text layoutX="784.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Žymėti studentų lankomumą" wrappingWidth="189.0">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+        <Text layoutX="789.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ieškoti pagal vardą:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text layoutX="791.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ieškoti pagal pavardę:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Button fx:id="searchBTN" layoutX="789.0" layoutY="336.0" mnemonicParsing="false" onAction="#onClickSearchBTN" prefHeight="31.0" prefWidth="177.0" text="Ieškoti">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <TextField fx:id="searchNameInput" layoutX="789.0" layoutY="117.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite vardą">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="searchSurnameInput" layoutX="789.0" layoutY="204.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite pavardę">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Text layoutX="860.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="arba">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+        <Button fx:id="registerBTN" layoutX="226.0" layoutY="408.0" mnemonicParsing="false" onAction="#onClickRegisterBTN" prefHeight="54.0" prefWidth="177.0" text="Žymėti">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Button>
+      <TextField fx:id="searchGroupInput" layoutX="789.0" layoutY="294.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite grupę">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text layoutX="791.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ieškoti pagal grupę:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="860.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="arba">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Button fx:id="selectGroupBTN" layoutX="521.0" layoutY="396.0" mnemonicParsing="false" onAction="#onClickSelectGroupBTN" prefHeight="31.0" prefWidth="144.0" text="Rinktis visą grupę">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Text layoutX="462.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupė:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="selectGroupInput" layoutX="458.0" layoutY="434.0" prefHeight="35.0" prefWidth="207.0" promptText="Įveskite grupę">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="selectAllTableStudentsBTN" layoutX="726.0" layoutY="397.0" mnemonicParsing="false" onAction="#onClickSelectAllTableStudentsBTN" prefHeight="31.0" prefWidth="237.0" text="Pasirinkti visus esančius lentelėje">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <DatePicker fx:id="selectData" layoutX="27.0" layoutY="436.0" promptText="Pasirinkite datą" />
+      <Text layoutX="27.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="deselectAllTableStudentsBTN" layoutX="726.0" layoutY="436.0" mnemonicParsing="false" onAction="#onClickDeselectAllTableStudentsBTN" prefHeight="31.0" prefWidth="237.0" text="Anuliuoti visus pasirinkimus">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Line endX="-100.0" endY="79.0" layoutX="795.0" layoutY="396.0" startX="-100.0" stroke="#616161" />
+      <Line endX="-100.0" endY="79.0" layoutX="531.0" layoutY="396.0" startX="-100.0" stroke="#616161" />
+    </children>
+</AnchorPane>

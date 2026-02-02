@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="377.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bamo.EditStudentDataController">
+   <children>
+      <TableView fx:id="studentTable" prefHeight="294.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="nrColumn" prefWidth="51.0" text="Nr" />
+          <TableColumn fx:id="idColumn" prefWidth="145.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="225.0" text="Vardas" />
+            <TableColumn fx:id="surnameColumn" prefWidth="247.0" text="Pavardė" />
+            <TableColumn fx:id="groupColumn" minWidth="0.0" prefWidth="106.0" text="Grupė" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffeaf0" height="83.0" layoutY="294.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="985.0" />
+      <Text layoutX="783.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Redaguoti studentų duomenis" wrappingWidth="189.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="789.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ieškoti pagal vardą:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="791.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ieškoti pagal pavardę:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="searchBTN" layoutX="790.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClickSearchBTN" prefHeight="31.0" prefWidth="177.0" text="Ieškoti">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchNameInput" layoutX="789.0" layoutY="117.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite vardą">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="searchSurnameInput" layoutX="789.0" layoutY="214.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite pavardę">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text layoutX="860.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="arba">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="newInputID" layoutX="14.0" layoutY="330.0" prefHeight="31.0" prefWidth="157.0" promptText="Įveskite ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text layoutX="14.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="181.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vardas:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="398.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pavardė:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="624.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupė:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="newNameInput" layoutX="181.0" layoutY="330.0" prefHeight="31.0" prefWidth="206.0" promptText="Įveskite ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newSurnameInput" layoutX="398.0" layoutY="330.0" prefHeight="31.0" prefWidth="213.0" promptText="Įveskite pavardę">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newGroupInput" layoutX="624.0" layoutY="330.0" prefHeight="31.0" prefWidth="151.0" promptText="Įveskite grupę">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="changeBTN" layoutX="789.0" layoutY="309.0" mnemonicParsing="false" onAction="#onClickChangeBTN" prefHeight="54.0" prefWidth="177.0" text="Keisti">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

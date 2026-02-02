@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bamo.DisplayAttendanceController">
+    <children>
+        <TableView fx:id="studentTable" prefHeight="730.0" prefWidth="938.0">
+            <columns>
+                <TableColumn fx:id="nrColumn" prefWidth="24.0" text="Nr" />
+                <TableColumn fx:id="idColumn" prefWidth="70.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="91.0" text="Vardas" />
+                <TableColumn fx:id="surnameColumn" prefWidth="94.0" text="Pavardė" />
+                <TableColumn fx:id="groupColumn" minWidth="0.0" prefWidth="45.0" text="Grupė" />
+            </columns>
+        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0ffed" height="737.0" layoutX="938.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0" />
+        <Text layoutX="957.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtruoti studentų lankomumą" wrappingWidth="189.0">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+        <Text layoutX="957.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtruoti pagal vardą:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text layoutX="959.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtruoti pagal pavardę:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Button fx:id="searchBTN" layoutX="957.0" layoutY="327.0" mnemonicParsing="false" onAction="#onClickSearchBTNThis" prefHeight="31.0" prefWidth="177.0" text="Filtruoti">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <TextField fx:id="searchNameInp" layoutX="957.0" layoutY="108.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite vardą">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="searchSurnameInp" layoutX="957.0" layoutY="195.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite pavardę">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Text layoutX="1028.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="arba">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+        <TextField fx:id="searchGroupInp" layoutX="957.0" layoutY="285.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite grupę">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Text layoutX="959.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtruoti pagal grupę:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Text layoutX="1028.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="arba">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+        <Line endX="-100.0" endY="79.0" layoutX="1058.0" layoutY="297.0" startX="74.0" startY="79.0" stroke="#616161" />
+      <Text layoutX="957.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtruoti pagal laiko tarpą">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="firstDate" layoutX="958.0" layoutY="425.0" promptText="Pasirinkite 1 datą" />
+      <DatePicker fx:id="secondDate" layoutX="958.0" layoutY="460.0" promptText="Pasirinkite 2 datą" />
+      <Button fx:id="searchDateBTN" layoutX="958.0" layoutY="500.0" mnemonicParsing="false" onAction="#onClickSearchBTNDate" prefHeight="31.0" prefWidth="177.0" text="Filtruoti">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Line endX="-100.0" endY="79.0" layoutX="1057.0" layoutY="473.0" startX="74.0" startY="79.0" stroke="#616161" />
+      <Button fx:id="saveBTN" layoutX="957.0" layoutY="676.0" mnemonicParsing="false" onAction="#onClickSaveBTN" prefHeight="31.0" prefWidth="177.0" text="Saugoti">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="fileNameInput" layoutX="957.0" layoutY="625.0" prefHeight="31.0" prefWidth="177.0" promptText="Įveskite pavadinimą">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text layoutX="958.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Išsaugoti sąrašą">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="957.0" layoutY="619.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PDF filo pavadinimas:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
