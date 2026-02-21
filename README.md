@@ -1,5 +1,5 @@
 # Object-Oriented-Programming
-** JAVA 2023/2024 Spring Semester **
+**JAVA 2023/2024 Spring Semester**
 
 **Course Coordinators:**
 - Rimantas Vaicekauskas, Prof., Dr.
